@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROFUNK AUDIO</title>
+    <link rel="shortcut icon" href="assets/profunk.png" type="image/x-icon" />
 
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
@@ -82,11 +83,16 @@
               </span>
 
               <div class="audio-tabs">
-                <button class="audio-tab-btn">Sound Effects</button>
+                <div class="audio-tab-group">
+                  <button class="audio-tab-btn">Sound Effects</button>
 
-                <button class="audio-tab-btn audio-icon-btn">
-                  <img src="assets/preference-vertical (1).png" alt="" />
-                </button>
+                  <button class="audio-tab-btn audio-icon-btn">
+                    <img
+                      src="assets/preference-vertical (1).png"
+                      alt="Filter Icon"
+                    />
+                  </button>
+                </div>
 
                 <button class="audio-tab-btn audio-active">
                   All Sound Effect
@@ -700,17 +706,16 @@
         </div>
       </section>
     </main>
-    <!-- footer section -->
-    <!-- footer section -->
+
     <!-- footer section -->
     <footer class="pfa-footer">
       <div class="pfa-footer-container">
-        <!-- Logo & About -->
         <div class="pfa-footer-box pfa-about">
           <img
             src="assets/Copy of PROFUNK MEDIA GROUP 1.png"
             alt="ProFunk Audio"
           />
+
           <p>
             With a growing library of over 160,000 free sound effects downloads
             and more than 650 royalty free music tracks too, ZapSplat is one of
@@ -720,39 +725,38 @@
           </p>
         </div>
 
-        <!-- Quick Links -->
-        <div class="pfa-footer-box">
-          <h3>Quick Link</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
+        <div class="pfa-links-contact-wrapper">
+          <div class="pfa-footer-box pfa-quick-link">
+            <h3>Quick Link</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
 
-        <!-- Sound Packs -->
-        <div class="pfa-footer-box">
-          <h3>Sound Effects Packs</h3>
-          <ul>
-            <li><a href="#">Anime Tones</a></li>
-            <li><a href="#">Sci-Fi UI Tones</a></li>
-            <li><a href="#">Dark Cinematic Whooshes</a></li>
-          </ul>
-        </div>
+          <div class="pfa-footer-box pfa-sound-packs">
+            <h3>Sound Effects Packs</h3>
+            <ul>
+              <li><a href="#">Anime Tones</a></li>
+              <li><a href="#">Sci-Fi UI Tones</a></li>
+              <li><a href="#">Dark Cinematic Whooshes</a></li>
+            </ul>
+          </div>
 
-        <!-- Contact -->
-        <div class="pfa-footer-box pfa-contact">
-          <h3>Let's talk</h3>
-          <a class="pfa-email" href="mailto:info@profunk.tearm"
-            >info@profunk.tearm</a
-          >
+          <div class="pfa-footer-box pfa-contact">
+            <h3>Let's talk</h3>
+            <a class="pfa-email" href="mailto:info@profunk.tearm"
+              >info@profunk.tearm</a
+            >
 
-          <div class="pfa-contact-info">
-            <div>
-              <p>12/4 Azatutyan ave</p>
-              <p>Yerevan, Armenia</p>
+            <div class="pfa-contact-details">
+              <div>
+                <p>12/4 Azatutyan ave,</p>
+                <p>Yerevan, Armenia</p>
+              </div>
+              <p class="pfa-phone">+374 93 64-67-89</p>
             </div>
-            <p>+374 93 64-67-89</p>
           </div>
         </div>
       </div>
@@ -761,9 +765,11 @@
         <p class="pfa-copy">© 2024 NRK ACCOUNTING. All rights reserved.</p>
         <div class="pfa-social">
           <span>Quick Link</span>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-solid fa-x"></i></a>
+          <div class="link-style">
+            <a href="#"><i class="fab fa-facebook-f border"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in border"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter border"></i></a>
+          </div>
         </div>
       </div>
     </footer>

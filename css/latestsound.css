@@ -1,17 +1,29 @@
+/* Custom Variable (সুবিধার জন্য যুক্ত করা হলো) */
+:root {
+  --primary-color: #171b2e;
+  --inactive-bg: #eaeff2;
+  --inactive-border: #dfe6ef;
+  --inactive-color: #606060;
+  --hover-bg: #e0e6eb; /* হোভারের জন্য হালকা গ্রে */
+}
+
+/* Base Layout and General Styles */
+
 .latest-wrapper {
   z-index: 10;
   position: relative;
-  margin-top: -50px;
+  margin-top: 80px;
   border-radius: 25px 25px 0 0;
   width: 100%;
   background: #ffffff;
-  padding-top: 40px;
+
   padding-bottom: 40px;
 }
 
 .audio-area {
   max-width: 1320px;
   margin: 0 auto;
+  padding: 0px 10px;
 }
 
 /* TOP BAR */
@@ -24,7 +36,7 @@
 }
 
 .audio-heading {
-  font-size: 42px;
+  font-size: 56px;
   font-weight: 700;
   color: #1d1f2c;
   line-height: 130%;
@@ -34,43 +46,71 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 12px;
+  gap: 18px;
 }
 
 .audio-subtext {
   font-size: 18px;
-  color: #707070;
+  color: #777980;
   font-weight: 400;
 }
 
 .audio-tabs {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 16px;
 }
 
+/* Base Button Style */
 .audio-tab-btn {
   padding: 14px 28px;
-  border-radius: 12px;
-  border: 1px solid #dfe6ef;
-  background: #eaeff2;
-  color: #606060;
+  border: 1px solid var(--inactive-border);
+  background: var(--inactive-bg);
+  color: var(--inactive-color);
   font-size: 18px;
   cursor: pointer;
   font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0;
+}
+
+/* Button Group  */
+.audio-tab-group {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  gap: 6px;
+}
+
+.audio-tab-group .audio-tab-btn {
+  border: none;
+  background: var(--inactive-bg);
+}
+
+.audio-tab-group .audio-tab-btn:hover:not(.audio-active) {
+  background: var(--hover-bg);
 }
 
 .audio-icon-btn {
   padding: 14px 18px;
 }
 
-.audio-active {
-  background: #171b2e !important;
-  color: #fff !important;
-  border-color: #171b2e !important;
+.audio-icon-btn img {
+  height: 18px;
+  width: 18px;
+  display: block;
 }
 
-/* GRID */
+/* Active Button Style (All Sound Effect) */
+.audio-active {
+  background: var(--primary-color) !important;
+  color: #fff !important;
+  border-color: var(--primary-color) !important;
+  border-radius: 12px !important;
+  padding: 14px 28px;
+}
+
+/* --- GRID & CARD STYLES --- */
 .audio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -78,7 +118,6 @@
   background: #fff;
 }
 
-/* CARD */
 .audio-card {
   background: #f8fafb;
   border-radius: 10px;
@@ -97,12 +136,14 @@
 .audio-logo {
   width: 60px;
   height: 60px;
+  border-radius: 10px;
 }
 
 .audio-title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   color: #222;
+  letter-spacing: 0.5%;
   line-height: 130%;
 }
 
@@ -158,14 +199,14 @@
   border-right: 1px solid #d7dce0;
 }
 
-/* RESPONSIVE */
+/* --- RESPONSIVE STYLES --- */
 @media (max-width: 992px) {
   .audio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .audio-heading {
-    font-size: 34px;
+    font-size: 45px;
   }
 }
 
@@ -176,28 +217,64 @@
   }
 
   .audio-actions {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .audio-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     padding: 16px;
   }
 
   .audio-heading {
-    font-size: 28px;
+    font-size: 35px;
   }
 
+  .audio-tabs {
+    gap: 10px;
+  }
+
+  /* Responsive Button Sizing */
+  .audio-tab-group {
+    border-radius: 8px;
+  }
   .audio-tab-btn {
     font-size: 15px;
     padding: 10px 20px;
   }
+  .audio-icon-btn {
+    padding: 10px 14px;
+  }
+  .audio-active {
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 8px !important;
+  }
 }
 
 @media (max-width: 480px) {
-  .audio-player {
-    flex-wrap: flex;
-    justify-content: center;
+  .audio-tabs {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .audio-grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 16px;
+  }
+
+  .audio-tab-group {
+    width: 100%;
+    display: flex;
+  }
+
+  .audio-tab-group .audio-tab-btn {
+    flex: 1;
+    font-size: 14px;
+  }
+
+  .audio-active {
+    width: 100%;
+    margin-left: 0;
+    font-size: 14px;
   }
 
   .audio-time {

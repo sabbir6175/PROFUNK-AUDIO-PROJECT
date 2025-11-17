@@ -1,4 +1,4 @@
-/* Footer */
+/* Footer Base Styles */
 .pfa-footer {
   background: #000;
   padding-top: 60px;
@@ -7,22 +7,33 @@
   font-family: "Arial", sans-serif;
 }
 
+/* Icon Styling (Border) - ছবির মতো সাদা ব্যাকগ্রাউন্ডের জন্য */
+.border {
+  width: 30px;
+  height: 30px;
+}
+.fa-brands,
+.fab {
+  display: flex;
+}
+
+/* Footer Container - Main Layout */
 .pfa-footer-container {
-  position: relative;
   max-width: 1320px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
   padding: 60px 60px 40px;
+  flex-wrap: wrap; /* রেসপনসিভনেসের জন্য যুক্ত */
 
+  /* ব্যাকগ্রাউন্ড ইমেজ এবং ওভারলে আপনার প্রয়োজন অনুযায়ী ব্যবহার করুন */
   background: url("/assets/Frame\ 1597885071.png") center/cover no-repeat;
-
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.2fr;
-  gap: 50px;
-
+  position: relative;
   border-radius: 32px 32px 0 0;
   overflow: hidden;
 }
 
+/* Overlay for background image */
 .pfa-footer-container::before {
   content: "";
   position: absolute;
@@ -31,9 +42,11 @@
   z-index: 0;
 }
 
+/* Individual Footer Box Styling */
 .pfa-footer-box {
   position: relative;
   z-index: 2;
+  margin-bottom: 0; /* অতিরিক্ত মার্জিন সরানো হয়েছে */
 }
 
 .pfa-footer-box h3 {
@@ -49,9 +62,18 @@
   color: #eaeff2;
   opacity: 0.9;
   line-height: 1.6;
-  max-width: 330px;
 }
 
+/* About Section Specifics (Left Content) */
+.pfa-about {
+  max-width: 380px; /* বামপাশের কন্টেন্টের জন্য স্থান নির্ধারণ */
+}
+
+.pfa-about img {
+  margin-bottom: 14px;
+}
+
+/* List Styling */
 .pfa-footer-box ul {
   padding: 0;
   list-style: none;
@@ -72,43 +94,72 @@
   color: #fff;
 }
 
+/* Links and Contact Wrapper (Right Content) */
+.pfa-links-contact-wrapper {
+  display: flex;
+  gap: 70px;
+  position: relative;
+  z-index: 2;
+  /* এই সেকশনটি ডানদিকে সব লিংক এবং কন্টাক্ট ইনফো ধরে রাখবে */
+}
+
+/* Email Styling */
 .pfa-email {
-  font-size: 40px;
+  font-size: 30px;
   color: #ffffff;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
   margin-bottom: 15px;
   display: inline-block;
   font-weight: 500;
   line-height: 130%;
 }
 
-.pfa-contact-info {
+/* Contact Info Layout */
+.pfa-contact-details {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
+.pfa-contact-details p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* End Footer (Bottom Bar) */
 .pfa-end-footer {
   max-width: 1320px;
   margin: 20px auto 0;
-  padding: 14px 0;
-
+  padding: 14px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .pfa-copy {
-  color: #aaa;
+  color: white;
   font-size: 14px;
   opacity: 0.8;
+  margin: 0;
+}
+
+/* Social Icons */
+.pfa-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pfa-social span {
+  color: white;
+  font-size: 16px;
+  opacity: 0.8;
+  margin-right: 10px;
 }
 
 .pfa-social a {
   display: inline-block;
-  margin-left: 12px;
   color: #fff;
   font-size: 18px;
   transition: 0.3s;
@@ -119,78 +170,131 @@
   opacity: 1;
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
+/* --- Responsive Design (Media Queries) --- */
+
+/* Tablet and Smaller Desktop (<= 1100px) */
+@media (max-width: 1100px) {
   .pfa-footer-container {
-    grid-template-columns: 1.8fr 1fr 1fr;
-  }
-
-  .pfa-contact {
-    margin-top: 20px;
-  }
-
-  .pfa-footer-box p {
-    max-width: 100%;
-  }
-}
-
-/* Mobile Large */
-@media (max-width: 768px) {
-  .pfa-footer-container {
-    grid-template-columns: 1fr 1fr;
-    padding: 40px 28px;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
   }
 
   .pfa-about {
-    grid-column: span 2;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .pfa-links-contact-wrapper {
+    gap: 40px;
+  }
+}
+
+/* Tablet Portrait and Large Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .pfa-footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px 30px;
+  }
+
+  .pfa-about {
+    order: 1; /* About section শীর্ষে থাকবে */
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .pfa-about img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .pfa-links-contact-wrapper {
+    order: 2;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around; /* লিংক সেকশনগুলো পাশাপাশি থাকবে */
+    gap: 30px;
+  }
+
+  .pfa-quick-link,
+  .pfa-sound-packs {
+    width: 45%; /* দুটি কলামে দেখানোর জন্য */
+    text-align: left;
+  }
+
+  .pfa-contact {
+    width: 100%;
+    text-align: center;
   }
 
   .pfa-end-footer {
     flex-direction: column;
     gap: 10px;
+    padding: 14px 30px;
     text-align: center;
   }
 
-  .pfa-social {
-    justify-content: center;
+  .pfa-social span {
+    margin-right: 5px;
   }
 }
 
-/* Mobile Small */
+/* Mobile Small (<= 480px) */
 @media (max-width: 480px) {
+  .pfa-footer {
+    padding-top: 30px;
+  }
+
   .pfa-footer-container {
-    grid-template-columns: 1fr;
-    padding: 32px 20px;
-    gap: 25px;
+    padding: 30px 20px 20px;
   }
 
-  .pfa-about {
-    grid-column: span 1;
+  .pfa-about p {
+    font-size: 14px;
   }
 
-  .pfa-email {
-    font-size: 18px;
-    word-break: break-word;
+  .pfa-links-contact-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pfa-quick-link,
+  .pfa-sound-packs,
+  .pfa-contact {
+    width: 100%;
+    text-align: center;
   }
 
   .pfa-footer-box h3 {
     font-size: 18px;
   }
 
-  .pfa-footer-box p,
-  .pfa-footer-box ul li a {
-    font-size: 14px;
+  .pfa-email {
+    font-size: 24px;
+    word-break: break-all;
+  }
+
+  .pfa-contact-details {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
   }
 
   .pfa-end-footer {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
+    padding: 10px 20px;
   }
 
-  .pfa-social a {
-    font-size: 16px;
-    margin-left: 8px;
+  .pfa-social {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .pfa-social span {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
   }
 }
