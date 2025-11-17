@@ -1,0 +1,147 @@
+/* Wrapper */
+.sca-wrapper {
+  background: #f5ede3;
+  padding: 80px 0;
+  text-align: center;
+  border-radius: 30px;
+}
+
+/* Header */
+.sca-header h2 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #1d1f2c;
+  margin-bottom: 10px;
+  line-height: 130%;
+}
+
+.sca-header p {
+  font-size: 18px;
+  color: #777980;
+  margin-bottom: 50px;
+  padding-bottom: 25px;
+}
+
+/* Grid */
+.sca-grid {
+  max-width: 1320px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+/* Cards */
+.sca-card {
+  padding: 45px 40px;
+  text-align: left;
+  border-radius: 14px;
+}
+
+.sca-icon {
+  width: 38px;
+  margin-bottom: 20px;
+}
+
+/* Card Variants */
+.sca-dark {
+  background: #000;
+  color: #fff;
+}
+.sca-dark h3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 130%;
+}
+.sca-dark p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.sca-light {
+  margin-top: -50px;
+  background: #ffffff;
+  color: #000;
+  border-left: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+}
+.sca-light h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 130%;
+  color: #1d1f2c;
+}
+.sca-light p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #1d1f2c;
+}
+
+.sca-ultra-light {
+  background: #f9fafb;
+  color: #000;
+}
+.sca-ultra-light h3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 130%;
+}
+.sca-ultra-light p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .sca-header h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sca-grid {
+    grid-template-columns: 1fr;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .sca-light {
+    border-left: none;
+    border-right: none;
+  }
+
+  .sca-card {
+    margin-bottom: 20px;
+  }
+
+  .sca-header h2 {
+    font-size: 42px;
+    line-height: 125%;
+  }
+
+  .sca-header p {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sca-header h2 {
+    font-size: 32px;
+    line-height: 125%;
+  }
+
+  .sca-header p {
+    font-size: 13px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sca-header h2 {
+    font-size: 28px;
+  }
+}

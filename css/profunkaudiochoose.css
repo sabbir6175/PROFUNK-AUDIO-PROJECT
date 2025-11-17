@@ -1,0 +1,163 @@
+/* Wrapper */
+.pfa-choose {
+  max-width: 1320px;
+  margin: 70px auto;
+}
+
+/* Header */
+.pfa-choose-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pfa-title {
+  font-size: 56px;
+  line-height: 130%;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.pfa-subtitle {
+  max-width: 530px;
+  font-size: 18px;
+  color: #666;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+/* Grid */
+.pfa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 20px;
+}
+
+/* Card */
+.pfa-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pfa-card i.pfa-icon {
+  font-size: 22px;
+  color: #000;
+}
+
+.pfa-card h3 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.pfa-card p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* COLOR VARIANTS */
+.pfa-cream {
+  width: 648px;
+  background: #f7f2eb;
+}
+
+.pfa-white {
+  background: #f8fafc;
+}
+
+.pfa-black {
+  background: #000;
+  color: #fff;
+}
+
+.pfa-black i {
+  color: #fff;
+}
+
+.pfa-black p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* RESPONSIVE – TABLET */
+@media (max-width: 1024px) {
+  .pfa-choose-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pfa-title {
+    font-size: 44px;
+  }
+
+  .pfa-subtitle {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .pfa-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .pfa-card {
+    height: auto;
+    padding: 24px;
+  }
+
+  .pfa-cream {
+    width: 100%;
+  }
+}
+
+/* RESPONSIVE – MOBILE */
+@media (max-width: 640px) {
+  .pfa-choose {
+    margin: 50px 16px;
+  }
+
+  .pfa-title {
+    font-size: 32px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  .pfa-subtitle {
+    font-size: 15px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  .pfa-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .pfa-card {
+    padding: 22px;
+    height: auto;
+    gap: 10px;
+  }
+
+  .pfa-card h3 {
+    font-size: 18px;
+  }
+
+  .pfa-card p {
+    font-size: 13px;
+  }
+
+  .pfa-cream {
+    width: 100%;
+  }
+}
