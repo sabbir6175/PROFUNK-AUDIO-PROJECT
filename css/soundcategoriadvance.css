@@ -37,7 +37,7 @@
 .sca-card {
   padding: 45px 40px;
   text-align: left;
-  border-radius: 14px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .sca-icon {

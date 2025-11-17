@@ -69,16 +69,22 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .pfa-stay-connected {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 @media (max-width: 768px) {
   .pfa-connected-box {
     height: 300px;
   }
 
   .pfa-connected-title {
-    font-size: 30px;
+    font-size: 38px;
   }
 
   .pfa-connected-text {
-    font-size: 14px;
+    font-size: 11px;
   }
 }

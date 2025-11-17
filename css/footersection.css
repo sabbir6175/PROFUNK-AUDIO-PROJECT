@@ -210,7 +210,6 @@
   .pfa-links-contact-wrapper {
     order: 2;
     width: 100%;
-    flex-wrap: wrap;
     justify-content: space-around;
     gap: 30px;
   }
@@ -223,7 +222,7 @@
 
   .pfa-contact {
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .pfa-end-footer {
