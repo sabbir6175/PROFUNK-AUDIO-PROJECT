@@ -8,9 +8,9 @@ menuToggle.addEventListener("click", () => {
   // Toggle Icon (Font Awesome)
   if (navLinks.classList.contains("open")) {
     icon.classList.remove("fa-bars");
-    icon.classList.add("fa-times"); // Close icon
+    icon.classList.add("fa-times");
   } else {
     icon.classList.remove("fa-times");
-    icon.classList.add("fa-bars"); // Hamburger icon
+    icon.classList.add("fa-bars");
   }
 });

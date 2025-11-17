@@ -2,12 +2,12 @@
 .pfa-footer {
   background: #000;
   padding-top: 60px;
+  margin-top: 80px;
   border-radius: 32px 32px 0 0;
   color: #fff;
   font-family: "Arial", sans-serif;
 }
 
-/* Icon Styling (Border) - ছবির মতো সাদা ব্যাকগ্রাউন্ডের জন্য */
 .border {
   width: 30px;
   height: 30px;
@@ -24,9 +24,8 @@
   display: flex;
   justify-content: space-between;
   padding: 60px 60px 40px;
-  flex-wrap: wrap; /* রেসপনসিভনেসের জন্য যুক্ত */
+  flex-wrap: wrap;
 
-  /* ব্যাকগ্রাউন্ড ইমেজ এবং ওভারলে আপনার প্রয়োজন অনুযায়ী ব্যবহার করুন */
   background: url("/assets/Frame\ 1597885071.png") center/cover no-repeat;
   position: relative;
   border-radius: 32px 32px 0 0;
@@ -46,7 +45,7 @@
 .pfa-footer-box {
   position: relative;
   z-index: 2;
-  margin-bottom: 0; /* অতিরিক্ত মার্জিন সরানো হয়েছে */
+  margin-bottom: 0;
 }
 
 .pfa-footer-box h3 {
@@ -58,15 +57,16 @@
 
 .pfa-footer-box p {
   margin-top: 8px;
-  font-size: 15px;
-  color: #eaeff2;
+  font-size: 16px;
+  font-weight: 400;
+  color: #e9e9ea;
   opacity: 0.9;
-  line-height: 1.6;
+  line-height: 160%;
 }
 
 /* About Section Specifics (Left Content) */
 .pfa-about {
-  max-width: 380px; /* বামপাশের কন্টেন্টের জন্য স্থান নির্ধারণ */
+  max-width: 480px;
 }
 
 .pfa-about img {
@@ -100,7 +100,6 @@
   gap: 70px;
   position: relative;
   z-index: 2;
-  /* এই সেকশনটি ডানদিকে সব লিংক এবং কন্টাক্ট ইনফো ধরে রাখবে */
 }
 
 /* Email Styling */
@@ -172,8 +171,7 @@
 
 /* --- Responsive Design (Media Queries) --- */
 
-/* Tablet and Smaller Desktop (<= 1100px) */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .pfa-footer-container {
     justify-content: center;
     gap: 40px;
@@ -199,7 +197,7 @@
   }
 
   .pfa-about {
-    order: 1; /* About section শীর্ষে থাকবে */
+    order: 1;
     max-width: 100%;
     text-align: center;
   }
@@ -213,13 +211,13 @@
     order: 2;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-around; /* লিংক সেকশনগুলো পাশাপাশি থাকবে */
+    justify-content: space-around;
     gap: 30px;
   }
 
   .pfa-quick-link,
   .pfa-sound-packs {
-    width: 45%; /* দুটি কলামে দেখানোর জন্য */
+    width: 45%;
     text-align: left;
   }
 

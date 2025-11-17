@@ -1,6 +1,6 @@
 /* MAIN WRAPPER */
 .sound-popular-wrapper {
-  margin-top: 25px;
+  margin-top: 80px;
   margin-bottom: 25px;
   padding: 5px 0;
   width: 100%;
@@ -10,14 +10,14 @@
 
 .sound-popular-container {
   max-width: 1320px;
-  margin: 60px auto;
+  margin: 80px auto;
 }
 
 /* HEADER */
 .sound-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 .sound-right-side {
   display: flex;
@@ -26,7 +26,7 @@
 }
 
 .sound-header h2 {
-  font-size: 40px;
+  font-size: 56px;
   font-weight: 700;
   color: #111;
   margin: 0;
@@ -35,9 +35,9 @@
 .sound-header p {
   margin-top: 8px;
   max-width: 420px;
-  color: #555;
-  line-height: 1.45;
-  font-size: 16px;
+  color: #777980;
+  line-height: 160%;
+  font-size: 18px;
 }
 
 .sound-header-btn {
@@ -95,8 +95,10 @@
 }
 
 .sound-meta h3 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5%;
+  line-height: 130%;
   margin: 0;
 }
 
@@ -116,14 +118,17 @@
   transform: scale(1.05);
 }
 
-/* ----------------- RESPONSIVE ----------------- */
+/* RESPONSIVE design */
 
 @media (max-width: 1024px) {
   .sound-grid {
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
   }
-
+  .sound-popular-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .sound-card {
     width: 100%;
   }
@@ -141,7 +146,11 @@
 
 @media (max-width: 768px) {
   .sound-header h2 {
-    font-size: 32px;
+    font-size: 38px;
+  }
+  .sound-popular-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .sound-grid {
@@ -174,5 +183,13 @@
 
   .sound-header {
     margin-bottom: 70px;
+    flex-direction: column;
+  }
+  .sound-right-side {
+    justify-content: center;
+    align-items: center;
+  }
+  .sound-left-side {
+    text-align: center;
   }
 }

@@ -1,6 +1,7 @@
 /* Wrapper */
 .sca-wrapper {
   background: #f5ede3;
+  margin-top: 80px;
   padding: 80px 0;
   text-align: center;
   border-radius: 30px;
@@ -18,8 +19,8 @@
 .sca-header p {
   font-size: 18px;
   color: #777980;
-  margin-bottom: 50px;
-  padding-bottom: 25px;
+  /* margin-bottom: 50px;
+  padding-bottom: 25px; */
 }
 
 /* Grid */
@@ -29,6 +30,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
+  padding-top: 80px;
 }
 
 /* Cards */
@@ -95,9 +97,13 @@
 }
 
 /* Responsive */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .sca-header h2 {
-    font-size: 48px;
+    font-size: 56px;
+  }
+  .sca-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -113,9 +119,9 @@
     border-right: none;
   }
 
-  .sca-card {
+  /* .sca-card {
     margin-bottom: 20px;
-  }
+  } */
 
   .sca-header h2 {
     font-size: 42px;
@@ -135,13 +141,12 @@
   }
 
   .sca-header p {
-    font-size: 13px;
-    margin-bottom: 35px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 420px) {
   .sca-header h2 {
-    font-size: 28px;
+    font-size: 38px;
   }
 }

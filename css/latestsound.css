@@ -1,10 +1,10 @@
-/* Custom Variable (সুবিধার জন্য যুক্ত করা হলো) */
+/* Custom Variable */
 :root {
   --primary-color: #171b2e;
   --inactive-bg: #eaeff2;
   --inactive-border: #dfe6ef;
   --inactive-color: #606060;
-  --hover-bg: #e0e6eb; /* হোভারের জন্য হালকা গ্রে */
+  --hover-bg: #e0e6eb;
 }
 
 /* Base Layout and General Styles */
@@ -226,7 +226,7 @@
   }
 
   .audio-heading {
-    font-size: 35px;
+    font-size: 38px;
   }
 
   .audio-tabs {

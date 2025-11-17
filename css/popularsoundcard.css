@@ -2,11 +2,11 @@
   width: 100%;
   background: #ffffff;
   border-radius: 20px;
-  margin-top: -30px;
+  margin-top: 80px;
 }
 
 .psc-container {
-  padding: 60px 0;
+  padding: 80px 0;
   max-width: 1320px;
   margin: auto;
 }
@@ -25,8 +25,10 @@
 }
 
 .psc-header p {
+  color: #777980;
+  line-height: 160%;
+  font-weight: 400;
   font-size: 18px;
-  color: #6b7280;
   margin-top: 8px;
 }
 
@@ -117,6 +119,12 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .psc-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 @media (max-width: 991px) {
   .psc-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -126,5 +134,8 @@
 @media (max-width: 600px) {
   .psc-grid {
     grid-template-columns: 1fr;
+  }
+  .psc-header h2 {
+    font-size: 38px;
   }
 }
