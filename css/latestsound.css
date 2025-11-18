@@ -11,7 +11,8 @@
 
 .latest-wrapper {
   z-index: 10;
-  position: relative;
+  /* position: relative; */
+  overflow: hidden;
   margin-top: 80px;
   border-radius: 25px 25px 0 0;
   width: 100%;
@@ -174,7 +175,7 @@
 
 .audio-wave img {
   width: 100%;
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
 .audio-time {

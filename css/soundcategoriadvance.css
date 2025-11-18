@@ -38,6 +38,7 @@
   padding: 45px 40px;
   text-align: left;
   border-radius: 0px 0px 10px 10px;
+  transition: transform 0.25s ease;
 }
 
 .sca-icon {
@@ -47,8 +48,12 @@
 
 /* Card Variants */
 .sca-dark {
-  background: #000;
-  color: #fff;
+  background: white;
+  color: black;
+}
+.sca-dark:hover {
+  background-color: black;
+  color: white;
 }
 .sca-dark h3 {
   font-size: 30px;
@@ -68,22 +73,28 @@
   border-left: 1px solid #e5e7eb;
   border-right: 1px solid #e5e7eb;
 }
+.sca-light:hover {
+  background-color: black;
+  color: white;
+}
 .sca-light h3 {
   font-size: 32px;
   font-weight: 600;
   line-height: 130%;
-  color: #1d1f2c;
 }
 .sca-light p {
   font-size: 16px;
   font-weight: 500;
   line-height: 130%;
-  color: #1d1f2c;
 }
 
 .sca-ultra-light {
   background: #f9fafb;
   color: #000;
+}
+.sca-ultra-light:hover {
+  background-color: black;
+  color: white;
 }
 .sca-ultra-light h3 {
   font-size: 30px;
@@ -117,8 +128,11 @@
   .sca-light {
     border-left: none;
     border-right: none;
+    padding: 24px;
   }
-
+  .sca-ultra-light {
+    padding: 24px;
+  }
   /* .sca-card {
     margin-bottom: 20px;
   } */
@@ -132,12 +146,22 @@
     font-size: 14px;
     margin-bottom: 40px;
   }
+  .sca-grid {
+    gap: 20px;
+  }
+  .sca-dark {
+    margin-bottom: 50px;
+    padding: 24px;
+  }
 }
 
 @media (max-width: 600px) {
   .sca-header h2 {
     font-size: 32px;
     line-height: 125%;
+  }
+  .sca-grid {
+    gap: 20px;
   }
 
   .sca-header p {
@@ -148,5 +172,8 @@
 @media (max-width: 420px) {
   .sca-header h2 {
     font-size: 38px;
+  }
+  .sca-card {
+    padding: 20px;
   }
 }
